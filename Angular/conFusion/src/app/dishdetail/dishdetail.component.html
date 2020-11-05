@@ -25,13 +25,13 @@
     
   </div>
 
-  <div fxFlex="40" fxLayout="column" fxLayoutGap="10px">
-    <mat-list> <h2> Comments </h2></mat-list>
+  <div fxFlex="40">
     <mat-list *ngIf="dish">  
+      <h3> Comments </h3>
       <mat-list-item *ngFor="let objComment of dish.comments">               
-        <p matLine> {{objComment.comment}} </p> 
+        <h4 matLine> {{objComment.comment}} </h4> 
         <p matLine> {{objComment.rating}} Stars </p>      
-        <p matLine> -- {{objComment.author}} {{objComment.date | date}}</p>
+        <p matLine> <span> -- {{objComment.author}} {{objComment.date | date}}</span> </p>
       </mat-list-item>
     </mat-list>
   </div>
